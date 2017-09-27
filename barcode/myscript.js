@@ -59,7 +59,7 @@ function loadContents(fileName, callback){
 //   -1 when not found
 function findWithBarcode(barcode) {
     for (var i = 0; i < list.length; i++) {
-        if (barcode == list[i].id) {
+        if (barcode == list[i].regno) {
             // found the item
             return i
         }
@@ -69,13 +69,13 @@ function findWithBarcode(barcode) {
 
 function detailsOfItem(index) {
     
-    var details = "id: " + list[index].id
+    var details = "id: " + list[index].regno
     details += "<br>"
-    details += list[index].item
+    details += list[index].name
     details += "<br>"
-    details += list[index].description
-    details += "<br>"
-    details += "Rs. " + list[index].price
+    details += list[index].phonenumber
+    //details += "<br>"
+   //details += "Rs. " + list[index].price
     
     return details
 }
